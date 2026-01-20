@@ -12,10 +12,12 @@ var config = Config{
 
 func TestNewJWT(t *testing.T) {
 	j := NewJWT(&config)
-	auth, err := j.GenerateAccessToken("test")
+	auth, err := j.GenerateAccessToken("")
 	if err != nil {
 		t.Error(err)
 	}
+
+	t.Log(auth)
 
 	data, err := j.ParseToken(auth.AccessToken)
 	if err != nil {

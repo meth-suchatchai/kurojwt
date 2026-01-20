@@ -1,4 +1,4 @@
-module github.com/BossZaNaHub/kurojwt
+module kurojwt
 
 go 1.23
 
